@@ -10,7 +10,8 @@
   },
   "files": [
     "dist/content-sizer.js",
-    "dist/content-sizer.js.map"
+    "dist/content-sizer.js.map",
+    "js/content-sizer.js"
   ],
   "scripts": {
     "dev-env": "parcel *.html",
