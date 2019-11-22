@@ -1,0 +1,23 @@
+{
+  "name": "content-sizer",
+  "version": "0.1.0",
+  "main": "dist/content-sizer.js",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel": "^1.12.3",
+    "standard": "^14.3.1",
+    "testcafe": "^1.1.4"
+  },
+  "files": [
+    "dist/content-sizer.js",
+    "dist/content-sizer.js.map"
+  ],
+  "scripts": {
+    "dev-env": "parcel *.html",
+    "build-env": "parcel build *.html",
+    "now-build": "npm run build-env",
+    "dev": "parcel watch js/content-sizer.js --no-hmr",
+    "build": "parcel build js/content-sizer.js",
+    "test": "testcafe chrome:headless,firefox:headless tests/*-test.js"
+  }
+}
