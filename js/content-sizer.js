@@ -259,7 +259,7 @@ const widthCalc = {
   }
 }
 
-export default class ZnSize {
+export default class ContentSizer {
   /**
    * UpdateRequester Function
    *
@@ -270,7 +270,7 @@ export default class ZnSize {
    */
 
   /**
-   * ZnSize
+   * ContentSizer
    * Auto-detects sizing needs, and executes resizing on command
    * 
    * @param {UpdateRequester} updateRequester
