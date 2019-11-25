@@ -261,9 +261,9 @@ const widthCalc = {
 
 export default class ContentSizer {
   /**
-   * UpdateRequester Function
+   * UpdateHandler Function
    *
-   * @callback UpdateRequester
+   * @callback UpdateHandler
    * @param {{ width: string, height: string }} dimensions
    *
    * @returns {*}
@@ -273,13 +273,13 @@ export default class ContentSizer {
    * ContentSizer
    * Auto-detects sizing needs, and executes resizing on command
    * 
-   * @param {UpdateRequester} updateRequester
+   * @param {UpdateHandler} updateHandler
    * @param {Object} methods
    * @param {'bodyOffset' | 'bodyScroll' | 'documentElementOffset' | 'documentElementScroll' | 'furthestElement' | 'min' | 'max'} methods.height
    * @param {'bodyOffset' | 'bodyScroll' | 'documentElementOffset' | 'documentElementScroll' | 'furthestElement' | 'min' | 'max' | 'scroll'} methods.width
    */
-  constructor (updateRequester = d => {}, methods = {}) {
-    this.updateRequester = updateRequester
+  constructor (updateHandler = d => {}, methods = {}) {
+    this.updateHandler = updateHandler
     this.heightMethod = typeof methods.height === 'string' ? methods.height : 'content'
     this.widthMethod = typeof methods.width === 'string' ? methods.width : 'content'
     this.observer = null
@@ -323,7 +323,7 @@ export default class ContentSizer {
     this.currentWidth = this.getWidth()
 
     if (this.isSizeChanged(height, this.currentHeight, 2) || this.isSizeChanged(width, this.currentWidth, 2)) {
-      this.updateRequester({
+      this.updateHandler({
         width: `${this.currentWidth}px`,
         height: `${this.currentHeight}px`
       })
