@@ -1,6 +1,3 @@
-dist/*
-!dist/content-sizer.js
-!dist/content-sizer.js.map
 .idea/
 .cache/
 node_modules/
