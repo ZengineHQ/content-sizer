@@ -1,17 +1,21 @@
 {
   "name": "content-sizer",
-  "version": "0.1.2",
-  "main": "js/content-sizer.js",
+  "version": "0.1.3",
+  "main": "build/content-sizer.js",
   "license": "MIT",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "standard": "^14.3.1",
     "testcafe": "^1.1.4"
   },
   "files": [
+    "build/content-sizer.js",
     "js/content-sizer.js"
   ],
   "scripts": {
     "lint": "standard",
+    "build": "babel js -d build",
     "test": "testcafe chrome:headless,firefox:headless tests/*-test.js"
   }
 }
