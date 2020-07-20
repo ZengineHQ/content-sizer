@@ -13,6 +13,11 @@
     "build/content-sizer.js",
     "js/content-sizer.js"
   ],
+  "standard": {
+    "ignore": [
+      "/build/**"
+    ]
+  },
   "scripts": {
     "lint": "standard",
     "build": "babel js -d build",
