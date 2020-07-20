@@ -22,11 +22,11 @@ const getComputedStyle = (prop, element) => {
  * @returns {number}
  */
 const getMaxElement = (side, elements) => {
-  let elementsLength = elements.length
+  const elementsLength = elements.length
   let elVal = 0
   let maxVal = 0
 
-  let Side = capitalizeFirstLetter(side)
+  const Side = capitalizeFirstLetter(side)
 
   for (let i = 0; i < elementsLength; i++) {
     if (elements[i].nodeType === 1) {
@@ -103,8 +103,8 @@ const capitalizeFirstLetter = (string) => {
 const elementHasRelative = dimension => element => ['%', 'vh', 'vw', 'vmin', 'vmax'].some(symbol => element.style[dimension].includes(symbol))
 
 /**
- * 
- * @param  {...HTMLElement} elements 
+ *
+ * @param  {...HTMLElement} elements
  */
 const recursivelyGetHeight = elements => {
   elements = Array.from(elements).filter(el => el.nodeName !== 'SCRIPT')
@@ -272,7 +272,7 @@ export default class ContentSizer {
   /**
    * ContentSizer
    * Auto-detects sizing needs, and executes resizing on command
-   * 
+   *
    * @param {UpdateHandler} updateHandler
    * @param {Object} methods
    * @param {'bodyOffset' | 'bodyScroll' | 'documentElementOffset' | 'documentElementScroll' | 'furthestElement' | 'min' | 'max'} methods.height
@@ -362,7 +362,7 @@ export default class ContentSizer {
     this.removeEventHandlers()
 
     if (!this.observer) return null
-    
+
     this.observer.disconnect()
     this.observer = false
   }
