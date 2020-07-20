@@ -1,7 +1,7 @@
 {
   "name": "content-sizer",
   "version": "0.1.2",
-  "main": "main/content-sizer.js",
+  "main": "js/content-sizer.js",
   "license": "MIT",
   "devDependencies": {
     "parcel": "^1.12.3",
